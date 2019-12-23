@@ -4,10 +4,10 @@ spring:
   datasource:
     name: mydb
     type: com.alibaba.druid.pool.DruidDataSource
-#    url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=UTF-8
+    #    url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=UTF-8
     url: jdbc:mysql://10.57.26.131:3306/smartroad?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&verifyServerCertificate=false&useSSL=false
-    username: ******
-    password: ******
+    username: *******
+    password: *******
     driver-class-name: com.mysql.jdbc.Driver
     minIdle: 1
     maxActive: 20
