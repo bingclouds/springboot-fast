@@ -1,7 +1,6 @@
 package cn.tongdun.mybatis.model;
 
 public class User {
-
     private Integer id;
 
     private String name;
@@ -10,6 +9,16 @@ public class User {
 
     private String phone;
 
+    public User(Integer id, String name, String password, String phone) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.phone = phone;
+    }
+
+    public User() {
+        super();
+    }
 
     public Integer getId() {
         return id;
@@ -32,7 +41,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
     public String getPhone() {
@@ -40,23 +49,6 @@ public class User {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
-    }
-    //    @Override
-//    public String toString() {
-//        return "User{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                '}';
-//    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+        this.phone = phone == null ? null : phone.trim();
     }
 }

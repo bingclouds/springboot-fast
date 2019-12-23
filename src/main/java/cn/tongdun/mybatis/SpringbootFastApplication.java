@@ -7,12 +7,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement    //开启事务注解
-@MapperScan("cn.tongdun.mybatis.dao")
+@MapperScan("cn.tongdun.mybatis.mapper")
 public class SpringbootFastApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootFastApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootFastApplication.class, args);
+    }
 
 }
 

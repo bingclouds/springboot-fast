@@ -1,6 +1,6 @@
 package cn.tongdun.mybatis.service.impl;
 
-import cn.tongdun.mybatis.dao.UserDao;
+import cn.tongdun.mybatis.mapper.UserMapper;
 import cn.tongdun.mybatis.model.User;
 import cn.tongdun.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,16 +18,16 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserDao userDao;
+    private UserMapper userMapper;
 
     @Override
     public User findById(Integer id) throws SQLException {
-        return userDao.findById(id);
+        return userMapper.findById(id);
     }
 
     @Override
     public void insert(User user) throws SQLException {
-        userDao.insert(user);
+        userMapper.insert(user);
     }
 
     /**
