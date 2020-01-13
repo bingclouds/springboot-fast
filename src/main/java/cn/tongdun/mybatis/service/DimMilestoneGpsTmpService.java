@@ -8,4 +8,5 @@ public interface DimMilestoneGpsTmpService {
 
     List<DimMilestoneGpsTmp> queryInfos(DimMilestoneGpsTmp dimMilestoneGpsTmp);
 
+    int batchInsert(DimMilestoneGpsTmp dimMilestoneGpsTmp);
 }

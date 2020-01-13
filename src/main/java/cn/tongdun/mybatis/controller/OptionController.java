@@ -28,6 +28,15 @@ public class OptionController {
         return CephServerResponse.createSuccess(dimMilestoneGpsTmps);
     }
 
+    @RequestMapping(value = "/batchInsert", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public CephServerResponse batchInsert() {
+        DimMilestoneGpsTmp dimMilestoneGpsTmp = new DimMilestoneGpsTmp();
+        int i = dimMilestoneGpsTmpService.batchInsert(dimMilestoneGpsTmp);
+        return CephServerResponse.createSuccess(i);
+    }
+
+
     // insertSelective
     @RequestMapping(value = "/insertSelective", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
